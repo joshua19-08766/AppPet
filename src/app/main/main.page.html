@@ -1,0 +1,43 @@
+
+<ion-content>
+  <img src ="/assets/new.png" alt="" class="center">    
+
+  <ion-card *ngFor="let a of animalList; let i=index" class="ion-margin">
+
+    <ion-card-header>
+      <ion-card-subtitle>
+          {{a.itemCategory}}
+      </ion-card-subtitle >
+    </ion-card-header>
+      <ion-card-content>
+        <ion-label>Name:{{a.itemName}}</ion-label>
+        </ion-card-content>
+   
+    <ion-card-content>
+      <ion-label> Gender:{{a.itemGender}}</ion-label>
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-label> Breed:{{a.itemBreed}}</ion-label>
+    </ion-card-content>
+
+   
+
+    <ion-card-content>
+      <ion-label> Appointment for vaccination:{{a.itemDate| date:'fullDate'}}</ion-label>
+    </ion-card-content>
+    
+
+      <ion-item button (click)="delete(i)"   >
+        <ion-icon color="danger"  name="trash-outline"></ion-icon>  
+        <p>Delete</p>
+      </ion-item>
+
+  </ion-card>
+
+  <ion-fab  vertical="bottom" horizontal="center" slot="fixed" s>
+  <ion-fab-button (click)="addTask()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+</ion-content>

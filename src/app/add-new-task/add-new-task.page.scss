@@ -1,0 +1,36 @@
+ion-content{
+  --ion-background-color: rgb(153, 96, 22);
+}
+.center{
+  display: block;
+  margin-top: -3em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+ion-datetime {
+  --background: #a16c2b;
+  --background-rgb: 255,241,242;
+  
+  border-radius: 16px;
+  box-shadow: rgba(var(--ion-color-rose-rgb), 0.3) 0px 10px 15px -3px;
+}
+ion-item{
+  color: rgb(255, 255, 255);
+}
+ion-card{
+  margin-top: -4em;
+}
+ion-button{
+  text-align: center;
+}
+/* Popover Interface: set color for the popover using Item's CSS variables */
+.my-custom-interface .select-interface-option {
+  --color: #971e49;
+  --color-hover: #79193b;
+}
+ion-button{
+  text-align: center;
+  display: flex;
+  
+}

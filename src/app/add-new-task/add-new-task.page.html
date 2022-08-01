@@ -1,0 +1,75 @@
+  
+
+<ion-content>
+  <img src ="/assets/new.png" alt="" class="center">  
+  <ion-card>
+    <ion-item>
+  
+      <ion-label>Category</ion-label>
+      <span>{{taskCategory}}</span>
+    </ion-item>
+    
+    <ion-item>
+    <ion-chip *ngFor="let c of categories; let i = index" (click)="selectedCategory(i)">
+    <ion-label>{{c}}</ion-label>
+    </ion-chip>
+    </ion-item>
+    
+    <ion-item>
+      <ion-input [(ngModel)]="taskName" placeholder="Name of your Pet"></ion-input>
+    </ion-item>
+    <ion-item>
+  
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="taskGender">
+          <ion-select-option value="Male">Male</ion-select-option>
+          <ion-select-option value="Female">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label>Breed</ion-label>
+        <ion-select  [(ngModel)]="taskBreed" class="custom-options">
+        <ion-select-option value="American Terrier">American Terrier</ion-select-option>
+        <ion-select-option value="Bulldog">Bulldog</ion-select-option>
+        <ion-select-option value="Chihuahua">Chihuahua</ion-select-option>
+        <ion-select-option value="Chow chow">Chow chow</ion-select-option>
+        <ion-select-option value="Corgi">Corgi</ion-select-option>
+        <ion-select-option value="Dalmatian">Dalmatian</ion-select-option>
+        <ion-select-option value="Doberman">Doberman</ion-select-option>
+        <ion-select-option value="German Shepherd">German Shepherd</ion-select-option>
+        <ion-select-option value="Labrador Retriever">Labrador Retriever</ion-select-option>
+        <ion-select-option value="Maltese">Maltese</ion-select-option>
+        <ion-select-option value="Poodle">Poodle</ion-select-option>
+        <ion-select-option value="Pug">Pug</ion-select-option>
+        <ion-select-option value="Samoyed">Samoyed</ion-select-option>
+        <ion-select-option value="Shihtzu">Shihtzu</ion-select-option>
+        <ion-select-option value="Siberian Husky">Siberian Husky</ion-select-option>
+        <ion-select-option value="Yorkshire Terrier">Yorkshire Terrier</ion-select-option>
+        <ion-select-option value="Abyssinian">Abyssinian</ion-select-option>
+        <ion-select-option value="Balinese">Balinese</ion-select-option>
+        <ion-select-option value="British Shorthair">British Shorthair</ion-select-option>
+        <ion-select-option value="Bengal">Bengal</ion-select-option>
+        <ion-select-option value="Burmese">Burmese</ion-select-option>
+        <ion-select-option value="Bombay">Bombay</ion-select-option>
+        <ion-select-option value="Chartreux">Chartreux</ion-select-option>
+        <ion-select-option value="Donskoy">Donskoy</ion-select-option>
+        <ion-select-option value="Himalayan">Himalayan</ion-select-option>
+        <ion-select-option value="Maine Coon">Maine Coon</ion-select-option>
+        <ion-select-option value="Persian">Persian</ion-select-option>
+        <ion-select-option value="Siamese">Siamese</ion-select-option>
+        <ion-select-option value="Ragdoll">Ragdoll</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    
+    <ion-item>
+        <ion-icon name="calendar-outline" slot="start"></ion-icon>
+        <ion-label>Vaccine</ion-label>
+        <ion-datetime [(ngModel)]="taskDate" presentation="date-time" prefer-wheel="true" ></ion-datetime>
+    </ion-item>
+ 
+ 
+  </ion-card>
+  <ion-button   shape="round" (click)="AddTask()">Add Animal</ion-button>
+</ion-content>
